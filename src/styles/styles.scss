@@ -17,13 +17,13 @@ body {
   font-family: Roboto, Arial, sans-serif;
 }
 
-.logo_img {
+.header_logo {
   height: 40px;
   width: 40px;
   display: block;
 }
 
-.header-moyo {
+.header_hat {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   display: flex;
   height: 60px;
@@ -50,6 +50,7 @@ a {
   line-height: 60px;
   margin: 10px;
   color: #060b35;
+  transition: var(--score-transform);
 }
 
 .nav__list {
@@ -64,6 +65,7 @@ a {
 }
 
 .nav__link:hover {
+  transition: var(--score-transform);
   color: var(--color-is-active);
 }
 
@@ -97,35 +99,35 @@ a {
   transform: translateX(-50%);
 }
 
-.main {
+.container {
   display: grid;
   grid-template-columns: repeat(var(--column-count), 200px);
-  padding-top: 50px;
+  margin-block: 50px;
   justify-content: center;
-  gap: 46px 48px;
-  padding-inline: 40px;
+  gap: 48px 46px;
+  margin-inline: 40px;
 }
 
 @media (max-width: 488px) {
-  .main {
+  .container {
     --column-count: 1;
   }
 }
 
 @media (min-width: 488px) {
-  .main {
+  .container {
     --column-count: 2;
   }
 }
 
 @media (min-width: 768px) {
-  .main {
+  .container {
     --column-count: 3;
   }
 }
 
 @media (min-width: 1024px) {
-  .main {
+  .container {
     --column-count: 4;
   }
 }
@@ -170,7 +172,7 @@ a {
   }
 }
 
-.cont {
+.card__meta {
   margin-top: 16px;
   margin-inline: 16px;
   display: flex;
@@ -197,9 +199,9 @@ a {
   }
 }
 
-.cont__view {
+.card__view {
   font-size: 10px;
-  font-weight: 400px;
+  font-weight: 400;
   line-height: 14px;
   color: #060b35;
 }
@@ -240,12 +242,14 @@ a {
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
+    transition: var(--score-transform);
   }
 
   &-link:hover {
     border: 1px var(--color-is-active) solid;
     background-color: #fff;
-    color:var(--color-is-active);
+    color: var(--color-is-active);
+    transition: var(--score-transform);
   }
 }
 
